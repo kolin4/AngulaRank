@@ -1,0 +1,19 @@
+/* NORMAL MENU*/
+.normalMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .normalMenu .normalMenuList li {
+    display: inline-block;
+    padding: 0 10px;
+    transition: 0.3s; }
+  .normalMenu .normalMenuList .normalLi:hover {
+    border-bottom: 2px solid white;
+    text-decoration: none; }
+  .normalMenu .normalMenuList .normalLi li {
+    text-decoration: none;
+    color: white;
+    font-family: 'Joti One', cursive;
+    transition: 0.2s; }
+  .normalMenu .normalMenuList .normalLi.activeLink li {
+    color: greenyellow; }

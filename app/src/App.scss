@@ -1,0 +1,46 @@
+@import  './stylesheets/header/header.scss';
+
+.App {
+  text-align: center;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+   
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+
+}
+
+a {
+  text-decoration: none;
+ 
+  &:visited{
+    color:black;
+  }
+}
+
+
+
+
+@media screen and (min-width: 641px) {
+  .burger-icon {
+    display: none; }
+  .menuBurger {
+    display: none; }
+  .burgerLogo {
+    display: none; }
+  .logo {
+    width: auto; } }
+
+@media screen and (max-width: 640px) {
+  .normalMenu {
+    display: none; } }
