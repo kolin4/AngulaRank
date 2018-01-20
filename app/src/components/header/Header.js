@@ -11,6 +11,8 @@ class Header extends React.Component {
   
  
     render(){
+
+        
         return (
         <Wraper>
    
@@ -35,21 +37,18 @@ class Header extends React.Component {
                         }}
                         className='menuBurger'>
                     <ul>
-                        {/* <NavLink exact activeClassName='activeLink' className='burgerLink' to='/'><li onClick={this.props.showMenu}>Home</li></NavLink>                      
-                        <NavLink activeClassName='activeLink' className='burgerLink'  to='/beers'><li onClick={this.props.showMenu}>Beers</li></NavLink> */}
+                        <NavLink exact activeClassName='activeLink' className='burgerLink' to='/'><li onClick={this.props.showMenu}>Home</li></NavLink>                      
+                         {this.props.isLoged ? <NavLink activeClassName='activeLink' className='burgerLink'  to='/contributors'><li onClick={this.props.showMenu}>Contributors</li></NavLink> : null}  
                   
-                  <li className='burgerLink' onClick={this.props.showMenu}>Home</li>
-                  <li className='burgerLink' onClick={this.props.showMenu}>Home</li>
+ 
                     </ul>
                 </nav>            
                 <div className='container  normalMenu'>
                     <Logo class='logo'/>
                     <nav className='normalMenuList'>
                         <ul>
-                        {/* <NavLink exact  className='normalLi' to='/'><li>Home</li></NavLink>
-                        <NavLink   className='normalLi'  to='/beers'><li>Beers</li></NavLink> */}
-                        <li className='normalLi' onClick={this.props.showMenu}>Home</li>
-                        <li  className='normalLi' onClick={this.props.showMenu}>Home</li>
+                        <NavLink exact  className='normalLi' to='/'><li>Home</li></NavLink>
+                        {this.props.isLoged ? <NavLink   className='normalLi'  to='/contributors'><li>Contributors</li></NavLink> : null }
                         </ul>
                     </nav>    
                 </div>
@@ -61,7 +60,8 @@ class Header extends React.Component {
 }
 const mapStateToProps = state =>{
     return {
-        menuShowed:state.header.menuShowed
+        menuShowed:state.header.menuShowed,
+        isLoged : state.logged.isLoged
     }
 }
 

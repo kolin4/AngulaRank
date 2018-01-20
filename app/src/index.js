@@ -7,9 +7,12 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import  headerReducer from './store/reducers/headerReducer';
+import loginReducer from './store/reducers/loginReducer';
+
 
 const reducer = combineReducers({
-    header : headerReducer
+    header : headerReducer,
+    logged: loginReducer
 })
 
 const store = createStore(reducer)

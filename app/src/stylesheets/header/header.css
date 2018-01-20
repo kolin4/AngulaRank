@@ -44,8 +44,8 @@ nav.menuBurger {
     border-bottom: 2px solid white;
     text-decoration: none; }
   .normalMenu .normalMenuList .normalLi li {
+    color: black;
     text-decoration: none;
-    color: white;
     font-family: 'Joti One', cursive;
     transition: 0.2s; }
   .normalMenu .normalMenuList .normalLi.activeLink li {

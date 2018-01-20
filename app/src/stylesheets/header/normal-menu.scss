@@ -8,16 +8,18 @@
       li {
         display: inline-block;
         padding: 0 10px;
-        transition: 0.3s;     
+        transition: 0.3s;
+            
       }
       .normalLi {
+
         &:hover {
           border-bottom: 2px solid white;
           text-decoration: none;
         }
         li {
+          color:black; 
           text-decoration: none;
-          color: white;
           font-family: 'Joti One', cursive;
           transition: 0.2s;
         }
