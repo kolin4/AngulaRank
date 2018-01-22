@@ -3,6 +3,7 @@ import Wraper from '../wraper'
 import Backdrop from './backdrop';
 import Logo from './logo';
 import BurgerClick from './burgerClick';
+import User from './user';
 
 import {NavLink}  from 'react-router-dom';
 import {connect} from 'react-redux';
@@ -11,8 +12,7 @@ class Header extends React.Component {
   
  
     render(){
-
-        
+       
         return (
         <Wraper>
    
@@ -30,6 +30,7 @@ class Header extends React.Component {
                     <BurgerClick />
 
                     </div>
+                    {this.props.isLogged ? <User userData={this.props.user} class='burger-user'/> : null}
                     <Logo class='logo burgerLogo'/>
                 <nav style={{
                             transform : this.props.menuShowed ? 'translateX(0)' : 'translateX(100vw)',
@@ -38,7 +39,7 @@ class Header extends React.Component {
                         className='menuBurger'>
                     <ul>
                         <NavLink exact activeClassName='activeLink' className='burgerLink' to='/'><li onClick={this.props.showMenu}>Home</li></NavLink>                      
-                         {this.props.isLoged ? <NavLink activeClassName='activeLink' className='burgerLink'  to='/contributors'><li onClick={this.props.showMenu}>Contributors</li></NavLink> : null}  
+                         {this.props.isLogged ? <NavLink activeClassName='activeLink' className='burgerLink'  to='/contributors'><li onClick={this.props.showMenu}>Contributors</li></NavLink> : null}  
                   
  
                     </ul>
@@ -46,9 +47,10 @@ class Header extends React.Component {
                 <div className='container  normalMenu'>
                     <Logo class='logo'/>
                     <nav className='normalMenuList'>
-                        <ul>
+                        <ul className='normal-ul'>
                         <NavLink exact  className='normalLi' to='/'><li>Home</li></NavLink>
-                        {this.props.isLoged ? <NavLink   className='normalLi'  to='/contributors'><li>Contributors</li></NavLink> : null }
+                        {this.props.isLogged ? <NavLink   className='normalLi'  to='/contributors'><li>Contributors</li></NavLink> : null }
+                        {this.props.isLogged ? <li><User userData={this.props.user} class='normal-user'/></li> : null}
                         </ul>
                     </nav>    
                 </div>
@@ -61,7 +63,8 @@ class Header extends React.Component {
 const mapStateToProps = state =>{
     return {
         menuShowed:state.header.menuShowed,
-        isLoged : state.logged.isLoged
+        isLogged : state.logged.isLogged,
+        user : state.logged.user
     }
 }
 
