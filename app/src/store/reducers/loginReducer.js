@@ -1,18 +1,42 @@
 const initialState = {
-    isLoged: false
+    isLogged: false,
+    user:{}
 }
 
 const reducer = (state = initialState,action) =>{
-    console.log('reducer');
-    
-    if (action.type === 'logIn'){
-        console.log('LOG IN');
-              
-        return {
-            isLoged : true
+        if (action.type === 'logout'){
+            localStorage.removeItem('user');
+            localStorage.removeItem('auth');     
+            return {
+                isLogged : false,
+                user :{}
+            }
         }
-    }
-    return state
+    
+    let key = localStorage.getItem('auth');
+    let user = JSON.parse(localStorage.getItem('user'));
+
+        if ( key !== null) {
+           
+            
+            return {
+                isLogged:true,
+                user
+            }
+        }
+        if (action.type === 'logIn'){
+    
+            let user = {
+                imgUrl: action.user.avatar_url,
+                login: action.user.login
+            }
+                
+            return {
+                isLogged : true,
+                user,
+            }
+        }
+        return state
 }
 
 
