@@ -1,0 +1,101 @@
+.details-container {
+  width: 100%;
+  max-width: 400px;
+  min-height: calc(100vh - 85px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto; }
+  .details-container .user-info {
+    width: 100%; }
+  .details-container .userAvatar {
+    margin: 10px auto;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 10px black;
+    -moz-box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .details-container .userAvatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: white url("./images/200w.gif");
+      background-size: contain;
+      background-position: center; }
+  .details-container .userDetails .userLogin {
+    height: 1.5rem;
+    font-weight: bold;
+    font-size: 1.2rem; }
+  .details-container .userDetails .details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .details-container .userDetails .details p {
+      font-size: 0.9rem;
+      margin: 2px 5px; }
+      .details-container .userDetails .details p strong {
+        margin: 0 5px; }
+  .details-container .repositories {
+    min-height: 35%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    .details-container .repositories .loader-container {
+      width: 90%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .details-container .repositories .loader-container .loader {
+        margin: 75px auto; }
+    .details-container .repositories .repository {
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
+      padding: 5px 5px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: 0.3s; }
+      .details-container .repositories .repository:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); }
+      .details-container .repositories .repository p {
+        font-size: 0.7rem; }
+      .details-container .repositories .repository p.description {
+        font-size: 0.6rem;
+        word-wrap: break-word; }
+
+.pagination {
+  width: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+  margin: 10px auto;
+  border-radius: 5px; }
+  .pagination .left {
+    font-weight: bold;
+    cursor: pointer;
+    width: 33.333%; }
+  .pagination .right {
+    font-weight: bold;
+    cursor: pointer;
+    width: 33.333%; }
+
+.close {
+  position: fixed;
+  right: 25px;
+  background-image: url("./images/close.png");
+  width: 25px;
+  height: 25px;
+  background-size: contain; }

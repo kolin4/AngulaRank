@@ -115,20 +115,20 @@ class Contributors extends React.Component{
                    let singleRepo =  response[i].data;
                    
                    
-                   if (response[i].data.length === 100){
+                   if ((response[i].data.length === 100) && (response[i].headers.link !== undefined)){
                        // zmien na octopage
                        
-                   
+                    console.log(response[i].headers.link);
+                    
                         let pageNr = octopage.parser(response[i].headers.link);
-                       
-                        
-                        
+                   
                    
                        let item = {
                            url : response[i].config.url,
                            pages : pageNr.last
                        }
                 
+                       
                         
                        manyPages.push(item)
                    }

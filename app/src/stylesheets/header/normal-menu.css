@@ -7,13 +7,20 @@
     display: inline-block;
     padding: 0 10px;
     transition: 0.3s; }
-  .normalMenu .normalMenuList .normalLi:hover {
-    border-bottom: 2px solid white;
-    text-decoration: none; }
-  .normalMenu .normalMenuList .normalLi li {
-    color: black;
-    text-decoration: none;
-    font-family: 'Joti One', cursive;
+  .normalMenu .normalMenuList .normal-ul {
+    display: flex;
+    align-items: center; }
+  .normalMenu .normalMenuList .normalLi {
+    font-weight: bold;
     transition: 0.2s; }
-  .normalMenu .normalMenuList .normalLi.activeLink li {
-    color: greenyellow; }
+    .normalMenu .normalMenuList .normalLi:hover {
+      text-decoration: none;
+      transform: scale(1.1); }
+    .normalMenu .normalMenuList .normalLi li {
+      color: #575757;
+      text-decoration: none;
+      transition: 0.2s; }
+      .normalMenu .normalMenuList .normalLi li:hover {
+        color: #2d2b2b; }
+    .normalMenu .normalMenuList .normalLi.activeLink li {
+      color: greenyellow; }

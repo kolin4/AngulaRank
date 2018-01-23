@@ -40,16 +40,77 @@ nav.menuBurger {
     display: inline-block;
     padding: 0 10px;
     transition: 0.3s; }
-  .normalMenu .normalMenuList .normalLi:hover {
-    border-bottom: 2px solid white;
-    text-decoration: none; }
-  .normalMenu .normalMenuList .normalLi li {
-    color: black;
-    text-decoration: none;
-    font-family: 'Joti One', cursive;
+  .normalMenu .normalMenuList .normal-ul {
+    display: flex;
+    align-items: center; }
+  .normalMenu .normalMenuList .normalLi {
+    font-weight: bold;
     transition: 0.2s; }
-  .normalMenu .normalMenuList .normalLi.activeLink li {
-    color: greenyellow; }
+    .normalMenu .normalMenuList .normalLi:hover {
+      text-decoration: none;
+      transform: scale(1.1); }
+    .normalMenu .normalMenuList .normalLi li {
+      color: #575757;
+      text-decoration: none;
+      transition: 0.2s; }
+      .normalMenu .normalMenuList .normalLi li:hover {
+        color: #2d2b2b; }
+    .normalMenu .normalMenuList .normalLi.activeLink li {
+      color: greenyellow; }
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 110;
+  top: 0;
+  left: 0; }
+
+.burger-user {
+  height: 48px;
+  width: 50px;
+  position: fixed;
+  display: flex;
+  margin-left: 5px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer; }
+
+.user-img {
+  width: 38px;
+  height: 38px;
+  background-size: contain; }
+
+.arrow {
+  border: 7px solid transparent;
+  border-top: 7px solid black;
+  margin-top: 10px; }
+
+.userInfo {
+  position: fixed;
+  top: 48px;
+  background-color: white;
+  border: 1px solid black;
+  z-index: 111; }
+  .userInfo ul {
+    width: 100px; }
+    .userInfo ul li {
+      padding: 5px 10px; }
+  .userInfo .name {
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-bottom: 1px solid black; }
+  .userInfo .logout {
+    font-size: 0.8rem; }
+
+.normal-user {
+  height: 48px;
+  width: 50px;
+  cursor: pointer;
+  display: flex;
+  margin-left: 5px;
+  align-items: center;
+  justify-content: space-between; }
 
 .header {
   height: 48px;

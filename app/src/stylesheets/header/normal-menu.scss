@@ -11,17 +11,26 @@
         transition: 0.3s;
             
       }
+      .normal-ul {
+        display: flex;
+        align-items: center
+      }
       .normalLi {
-
+        font-weight: bold;
+        transition: 0.2s;
+       
         &:hover {
-          border-bottom: 2px solid white;
           text-decoration: none;
+          transform: scale(1.1);
         }
         li {
-          color:black; 
+          color:rgb(87, 87, 87); 
           text-decoration: none;
-          font-family: 'Joti One', cursive;
+         
           transition: 0.2s;
+          &:hover {
+            color:rgb(45, 43, 43); 
+          }
         }
         &.activeLink li{
           color: greenyellow;
