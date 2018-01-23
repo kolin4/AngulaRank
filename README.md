@@ -5,3 +5,9 @@ Aplication shows all contributors from all Angular organization repositories on 
 
 aplication downloads a lot of data so first loading may take up to 5 min.
 TRY ONLINE : https://kolin4.github.io/AngulaRank/
+
+
+![alt text](http://i66.tinypic.com/mwfsl4.jpg)
+
+
+![alt text](http://i65.tinypic.com/2luzbpe.png)
