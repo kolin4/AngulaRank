@@ -1,0 +1,181 @@
+@import  './stylesheets/header/header.scss';
+@import './stylesheets/spinner.scss';
+@import './stylesheets/login/login.scss';
+@import './stylesheets/main/contributors.scss';
+
+.App {
+  text-align: center;
+
+}
+.error {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(black,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .errorMsg {
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  h3 {
+    color: white;
+  }
+  .close {
+    top: 70px;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: 'Montserrat',sans-serif; 
+ 
+}
+
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  &:visited{
+    color:black;
+  }
+}
+
+/* GRID */
+.row {
+  width:100%;
+  // margin-bottom: 50px;
+  margin-top: 65px; 
+}
+
+.col-1-4 {
+  display: inline-block;
+  padding: 0 8px;
+  width: 100%;
+  margin-bottom: 0;
+  display: inline-block;
+   height: calc(100vh - 48px)/10;
+}
+
+
+
+@media screen and (min-width: 641px) {
+  .burger-icon {
+    display: none; }
+  .menuBurger {
+    display: none; }
+  .burgerLogo {
+    display: none; }
+  .logo {
+    width: auto; }
+    .burger-user {
+      display: none;
+    }
+    .userInfo {
+      position: absolute;
+      top: 48px;
+      background-color: white;
+      border: 1px solid black;
+      transform: translate(-36%, 10%);
+    }
+    .sort-mobile {
+      display: none;
+    }
+    .login-content{
+      background-image: url('./images/bgImg.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+    
+  }
+
+@media screen and (max-width: 640px) {
+  .normal-user{
+    display: none;
+  }
+  .normalMenu {
+    display: none; }
+    .sort {
+      display: none;
+    }
+    .LoginContainer{
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
+
+@media screen and (min-width:550px){
+  .col-1-4 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width:840px){
+  .col-1-4 {
+    width: 33.3333%;
+  }
+  .details-container {
+    flex-direction: row;
+    min-width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    .repoDetailsDescription {
+      width: 40%;
+      margin-right: 50px;
+      margin-top: 20px;
+    }
+    .repoDetailsContributors{
+      width: 60%;
+      .col-1-4 {
+        width: 50%;
+      }
+    }
+    .user-info {
+      width: 30%;
+      margin-right: 50px;
+    }
+    .repositories {
+      width: 70%;
+      h5 {
+        font-size: 1rem;
+      }
+      .repository {
+        p{
+          font-size: 1rem;
+         &.description {
+          font-size: 1rem;
+          strong {
+            float: left;
+          }
+        } 
+        }
+
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width:1060px){
+  .col-1-4 {
+    width: 25%;
+  }
+}

@@ -1,0 +1,53 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 110;
+  top: 0;
+  left: 0; }
+
+.burger-user {
+  height: 48px;
+  width: 50px;
+  position: fixed;
+  display: flex;
+  margin-left: 5px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer; }
+
+.user-img {
+  width: 38px;
+  height: 38px;
+  background-size: contain; }
+
+.arrow {
+  border: 7px solid transparent;
+  border-top: 7px solid black;
+  margin-top: 10px; }
+
+.userInfo {
+  position: fixed;
+  top: 48px;
+  background-color: white;
+  border: 1px solid black;
+  z-index: 111; }
+  .userInfo ul {
+    width: 100px; }
+    .userInfo ul li {
+      padding: 5px 10px; }
+  .userInfo .name {
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-bottom: 1px solid black; }
+  .userInfo .logout {
+    font-size: 0.8rem; }
+
+.normal-user {
+  height: 48px;
+  width: 50px;
+  cursor: pointer;
+  display: flex;
+  margin-left: 5px;
+  align-items: center;
+  justify-content: space-between; }

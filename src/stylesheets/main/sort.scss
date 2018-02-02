@@ -1,0 +1,44 @@
+.sort {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+   
+    align-items: center;
+    .sort-container {
+        margin-left: 5px;
+        display: flex;
+        border: 1px solid #ccc;
+        line-height: 24px;
+        border-radius: 3px;
+    }
+    .sort-option {
+        border-left: 1px solid #eee;
+        cursor: pointer;
+        padding: 0 8px;
+        margin: 2px 0;
+        display: flex;
+        .arrow-sort {
+            border: 5px solid transparent;
+            border-top: 6px solid black;
+            margin-top: 9px;
+            margin-left: 5px;
+     
+        }
+    }
+    
+    
+}
+
+.sort-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        font-size: 0.8rem;
+    }
+    select{
+        margin-left: 5px;
+    }
+}

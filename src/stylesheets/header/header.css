@@ -1,0 +1,171 @@
+/* BURGER MENU */
+nav.menuBurger {
+  width: 60%;
+  background-color: white;
+  min-height: 100vh;
+  position: fixed;
+  top: 48px;
+  right: 0;
+  transition: 0.5s;
+  z-index: 101; }
+  nav.menuBurger li {
+    padding: 10px 20px;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
+    border-bottom: 1px ridge rgba(0, 0, 0, 0.2);
+    border-top: 1px ridge rgba(0, 0, 0, 0.2); }
+    nav.menuBurger li:hover {
+      background-color: rgba(0, 0, 0, 0.2); }
+  nav.menuBurger .burgerLink {
+    color: black;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%;
+    height: 100%; }
+    nav.menuBurger .burgerLink.activeLink {
+      color: greenyellow; }
+
+/* NORMAL MENU*/
+.normalMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .normalMenu .normalMenuList li {
+    display: inline-block;
+    padding: 0 10px;
+    transition: 0.3s; }
+  .normalMenu .normalMenuList .normal-ul {
+    display: flex;
+    align-items: center; }
+  .normalMenu .normalMenuList .normalLi {
+    font-weight: bold;
+    transition: 0.2s; }
+    .normalMenu .normalMenuList .normalLi:hover {
+      text-decoration: none;
+      transform: scale(1.1); }
+    .normalMenu .normalMenuList .normalLi li {
+      color: #575757;
+      text-decoration: none;
+      transition: 0.2s; }
+      .normalMenu .normalMenuList .normalLi li:hover {
+        color: #2d2b2b; }
+    .normalMenu .normalMenuList .normalLi.activeLink li {
+      color: greenyellow; }
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 110;
+  top: 0;
+  left: 0; }
+
+.burger-user {
+  height: 48px;
+  width: 50px;
+  position: fixed;
+  display: flex;
+  margin-left: 5px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer; }
+
+.user-img {
+  width: 38px;
+  height: 38px;
+  background-size: contain; }
+
+.arrow {
+  border: 7px solid transparent;
+  border-top: 7px solid black;
+  margin-top: 10px; }
+
+.userInfo {
+  position: fixed;
+  top: 48px;
+  background-color: white;
+  border: 1px solid black;
+  z-index: 111; }
+  .userInfo ul {
+    width: 100px; }
+    .userInfo ul li {
+      padding: 5px 10px; }
+  .userInfo .name {
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-bottom: 1px solid black; }
+  .userInfo .logout {
+    font-size: 0.8rem; }
+
+.normal-user {
+  height: 48px;
+  width: 50px;
+  cursor: pointer;
+  display: flex;
+  margin-left: 5px;
+  align-items: center;
+  justify-content: space-between; }
+
+.header {
+  height: 48px;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  position: fixed;
+  top: 0;
+  z-index: 100; }
+  .header .backdrop {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 100; }
+  .header .burger-icon {
+    height: 48px;
+    width: 48px;
+    position: fixed;
+    right: 0;
+    transition: 0.5s;
+    z-index: 101; }
+    .header .burger-icon .burgerClick {
+      width: 48px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0; }
+      .header .burger-icon .burgerClick div {
+        width: 62%;
+        height: 5px;
+        margin: 2px;
+        border-radius: 2px;
+        background-color: white;
+        border: 2px solid black; }
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+  font-family: 'Joti One', cursive; }
+  .logo .logoImg {
+    height: 80px;
+    width: 180px; }
+    .logo .logoImg img {
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-position: center; }

@@ -1,0 +1,77 @@
+@import './burger-menu.scss';
+@import './normal-menu.scss';
+@import './user.scss';
+.header {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+      -moz-box-shadow: 0 10px 6px -6px #777;
+      box-shadow: 0 10px 6px -6px #777;
+    position: fixed;
+    top:0;
+    z-index: 100;
+  
+    .backdrop {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 100;
+    }
+    
+    .burger-icon {
+      height: 48px;
+      width: 48px;
+      position: fixed;
+      right: 0;
+      transition: 0.5s;
+      z-index: 101;
+  
+      .burgerClick {
+        width:48px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      
+        align-items:center;
+        padding: 10px 0;
+      
+        div {
+          width: 62%;
+          height: 5px;
+          margin: 2px;
+          border-radius: 2px;
+          background-color: white;
+          border: 2px solid black;
+        }
+      }
+    }
+  }
+  
+  .logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+    font-family: 'Joti One', cursive;
+
+    .logoImg {
+      height: 80px;
+      width: 180px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-position: center;
+      }
+    }
+  }
+
+ 

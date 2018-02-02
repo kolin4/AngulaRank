@@ -1,0 +1,41 @@
+/* NORMAL MENU*/
+.normalMenu {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+  
+    .normalMenuList {
+      li {
+        display: inline-block;
+        padding: 0 10px;
+        transition: 0.3s;
+            
+      }
+      .normal-ul {
+        display: flex;
+        align-items: center
+      }
+      .normalLi {
+        font-weight: bold;
+        transition: 0.2s;
+       
+        &:hover {
+          text-decoration: none;
+          transform: scale(1.1);
+        }
+        li {
+          color:rgb(87, 87, 87); 
+          text-decoration: none;
+         
+          transition: 0.2s;
+          &:hover {
+            color:rgb(45, 43, 43); 
+          }
+        }
+        &.activeLink li{
+          color: greenyellow;
+        }
+      }
+  }
+  }             
+  
