@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route,BrowserRouter, HashRouter} from 'react-router-dom';
+import { Route, HashRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Contributors from './components/main/contributors';

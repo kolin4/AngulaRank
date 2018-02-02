@@ -218,8 +218,8 @@ class Contributors extends React.Component{
                    }
                    
                 }   
-                
-               this.getNumberOfFollowersAndGist(contributors);
+                 // cut data for better performance. If you want to take all users  remove slice method
+               this.getNumberOfFollowersAndGist(contributors.slice(0,1000));
                 
         })
         .catch( error =>{
@@ -231,7 +231,10 @@ class Contributors extends React.Component{
     //  i need to fetch all users with other url, because in previous data user object contain only nr of contributions, this causes
     // about 2.6k more requests and take a lot of time. Suggest to give up idea with sorting :)
     getNumberOfFollowersAndGist = (data)=>{
+        
         let contributors = data;
+       
+        
         
         let promiseArray = data.map( (elem)=>{
             let userUrl = elem.url;
