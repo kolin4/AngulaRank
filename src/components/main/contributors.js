@@ -313,7 +313,7 @@ class Contributors extends React.Component{
             default :
             break;
         }
-
+        localStorage.setItem('contributors',JSON.stringify(data));
         this.setState({
             data
         })
@@ -348,8 +348,13 @@ class Contributors extends React.Component{
         
     }
     render(){
-        
-           let data = this.state.isData ? this.state.data.slice(this.state.currentPage,100).map( (elem,index) => {
+        let dataToShow;
+            if (this.state.currentPage === 1){
+                dataToShow = 0;
+            } else {
+                dataToShow = this.state.currentPage +100;
+            }
+           let data = this.state.isData ? this.state.data.slice(dataToShow, dataToShow +100).map( (elem,index) => {
                 return (
                     <Link to={`/contributors/${elem.login}`} key={elem.id} >
                         <SingleUser parseData={()=> this.props.parseUserData(elem)} userData={elem}/>
