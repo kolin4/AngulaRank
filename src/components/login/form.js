@@ -56,7 +56,7 @@ class Form extends React.Component {
                     <input style={style.user} onClick={this.props.touchedFunc} onChange={this.props.changeHandler} type='text' id='username' />
                     <label htmlFor='password'>Password:</label>
                     <input style={style.password} onClick={this.props.touchedFunc} onChange={this.props.changeHandler} type='password' id='password' />          
-                    <button disabled={!this.props.isValid} type='submit'>Log in</button>
+                    <button disabled={!this.props.isValid} name='submit' value='Log in' type='submit'>Log in</button>
                 </form>
              </Wraper>
         )

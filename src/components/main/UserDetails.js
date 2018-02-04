@@ -25,7 +25,7 @@ class UserDetails extends React.Component{
         
         if (this.props.userData.name === undefined){
 
-            axios.get(`https://api.github.com/users/${id}`)
+            axios.get(`https://api.github.com/ussers/${id}`)
                 .then( response => {
                  
                     let user = response.data;
